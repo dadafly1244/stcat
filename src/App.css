@@ -1,0 +1,62 @@
+.App {
+  display: flex;
+  flex-direction: column;
+ }
+ .header {
+     padding: 1rem 2rem;
+     background: #f7a440;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     
+ }
+ #grid {
+   display: grid;
+   grid-template-rows: 1fr 1fr 1fr;
+   justify-items: center;
+ }
+
+ .header h1 {
+     color: #fff;
+     
+    
+ }
+
+ .header select {
+     height:30px;
+     width: 140px;
+     border-radius: 5px;
+     border: none;
+ }
+ 
+ section {
+     padding: 1rem;
+ }
+ 
+ .contents {
+     display: grid;
+     grid-template-columns: 1fr 1fr;
+     grid-gap: 2rem;
+ }
+
+
+.myButton {
+	background-color:#79bbff;
+	border-radius:28px;
+	border:1px solid #84bbf3;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:17px;
+	padding:16px 31px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #528ecc;
+}
+.myButton:hover {
+	background-color:#378de5;
+}
+.myButton:active {
+	position:relative;
+	top:1px;
+}
