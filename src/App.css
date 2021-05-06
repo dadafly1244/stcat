@@ -41,6 +41,7 @@
 
 
 .myButton {
+  width : 200px;
 	background-color:#79bbff;
 	border-radius:28px;
 	border:1px solid #84bbf3;
@@ -48,15 +49,25 @@
 	cursor:pointer;
 	color:#ffffff;
 	font-family:Arial;
-	font-size:17px;
+	font-size:25px;
 	padding:16px 31px;
 	text-decoration:none;
 	text-shadow:0px 1px 0px #528ecc;
+  margin: 5px;
+  
 }
 .myButton:hover {
 	background-color:#378de5;
+  
+  
 }
 .myButton:active {
 	position:relative;
 	top:1px;
+  
+}
+
+a{
+  /*링크 클릭해도 글자색 안바뀌게..필요..*/
+  text-decoration: none;
 }
