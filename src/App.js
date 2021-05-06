@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 import { Home, Community,Statistics, Map, User } from './pages';
 import './App.css';
 import Header from './components/Header'
+import mypic from './images/home.png'
 
 
 class App extends Component {
@@ -17,25 +18,15 @@ class App extends Component {
           <nav>
             <div id="grid">
               <div id="row1">
-                <button class="myButton">
-                  <Link to="/">Home</Link>
-                </button>
+                <Link to="/"><button class="myButton">Home</button></Link>
               </div>
               <div id="row2">
-                <button class="myButton">  
-                  <Link to="/Map">Map</Link>
-                </button>        
-                <button class="myButton">
-                  <Link to="/Community">Community</Link>
-                </button>
+                  <Link to="/Map"><button class="myButton">Map</button></Link>
+                  <Link to="/Community"><button class="myButton">Community</button></Link>
               </div>
               <div id="row3">
-                <button class="myButton">
-                  <Link to="/Statistics">Statistics</Link>
-                </button>
-                <button class="myButton">
-                  <Link to="/user">User</Link>
-                </button>
+                  <Link to="/Statistics"><button class="myButton">Statistics</button></Link>
+                  <Link to="/user"><button class="myButton">User</button></Link>
               </div>
             </div>
           </nav>

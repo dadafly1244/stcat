@@ -1,9 +1,10 @@
 import React from 'react';
 
+
 const Map = () => {
     return(
         <div>
-            <h2>Map Page</h2>
+            <h2>Map</h2>
         </div>
     )
 }
