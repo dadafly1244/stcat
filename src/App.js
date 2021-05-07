@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 import { Home, Community,Statistics, Map, User } from './pages';
 import './App.css';
 import Header from './components/Header'
-import mypic from './images/home.png'
+
 
 
 class App extends Component {
