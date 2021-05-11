@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 import { Home, Community,Statistics, Map, User } from './pages';
 import './App.css';
 import Header from './components/Header'
+import { withAuthenticator, AmplifySignOut } from '@aws-amplify/ui-react'
 
 
 
@@ -12,7 +13,9 @@ class App extends Component {
       <div>
         <div className="App">
           <Header />
+          <AmplifySignOut />
         </div>
+        
        <Router>
         <div>
           <nav>
@@ -44,5 +47,5 @@ class App extends Component {
     );
   }
 }
-
-export default App;
+export default withAuthenticator(App);
+//export default App;
