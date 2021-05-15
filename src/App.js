@@ -10,40 +10,40 @@ import { withAuthenticator, AmplifySignOut } from '@aws-amplify/ui-react'
 class App extends Component {
   render() {
     return (
-      <div>
-        <div className="App">
-          <Header />
-          <AmplifySignOut />
-        </div>
-        
+      <div className="App">
+          
         <Router>
+          <div>
+            <Link to="/Home"> <Header /></Link>
+            <AmplifySignOut />
+          </div>
           
           <div>
             <nav>
               <div id="grid">
                 <div id="row1">
-                  <Link to="/"><button class="myButton">Home</button></Link>
+                  <Link to="/Home"><button class="myButton">Home</button></Link>
                 </div>
                 <div id="row2">
-                    <Link to="/Map"><button class="myButton">Map</button></Link>
-                    <Link to="/Community"><button class="myButton">Community</button></Link>
+                  <Link to="/Map"><button class="myButton">Map</button></Link>
+                  <Link to="/Community"><button class="myButton">Community</button></Link>
                 </div>
                 <div id="row3">
-                    <Link to="/Statistics"><button class="myButton">Statistics</button></Link>
-                    <Link to="/user"><button class="myButton">User</button></Link>
+                  <Link to="/Statistics"><button class="myButton">Statistics</button></Link>
+                  <Link to="/user"><button class="myButton">User</button></Link>
                 </div>
               </div>
             </nav>
 
-            <Route exact path='/' component={Home}/>
+            <Route exact path='/Home' component={Home}/>
             <Route path="/Community" component={Community}/>
             <Route path="/Statistics" component={Statistics}/>
             <Route path="/Map" component={Map}/>
             <Route path='/user/:name' component={User}/>
           </div>
         </Router>
-       
       </div>
+     
       
     );
   }
