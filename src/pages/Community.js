@@ -56,28 +56,34 @@ const Community = () => {
     return(
         <div className="Community">
             <h2>My Notes App</h2>
-            <input
-                type="file"
-                onChange={onChange}
-            />
-            <input
-                onChange={e => setFormData({ ...formData, 'name': e.target.value})}
-                placeholder="Note name"
-                value={formData.name}
-            />
-            <input
-                onChange={e => setFormData({ ...formData, 'description': e.target.value})}
-                placeholder="Note description"
-                value={formData.description}
-            />
-            <button onClick={createNote}>Create Note</button>
-            <div style={{marginBottom: 30}}>
+            <div style="text-align:center;">
+                <input
+                    type="file"
+                    onChange={onChange}
+                />
+                <input
+                    onChange={e => setFormData({ ...formData, 'name': e.target.value})}
+                    placeholder="Note name"
+                    value={formData.name}
+                />
+                <input
+                    onChange={e => setFormData({ ...formData, 'description': e.target.value})}
+                    placeholder="Note description"
+                    value={formData.description}
+                />
+                <button onClick={createNote}>Create Note</button>
+            </div>
+            
+            <div style={{marginBottom: 30,alignItems : "center"}}>
                 {
                     notes.map(note => (
                         <div key={note.id || note.name}>
-                            <h3>{note.name}</h3>
-                            <p>{note.description}</p>
-                            <button onClick={() => deleteNote(note)}>Delete note</button>
+                          <h3>{note.name}</h3>
+                          <p>{note.description}</p>
+                          <button onClick={() => deleteNote(note)}>Delete note</button>
+                          {
+                            note.image && <img src={note.image} style={{width: 400 , alignItems : "center"}} />
+                          }
                         </div>
                     ))
                 }
