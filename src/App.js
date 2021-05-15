@@ -22,13 +22,10 @@ class App extends Component {
             <nav>
               <div id="grid">
                 <div id="row1">
-                  <Link to="/Home"><button class="myButton">Home</button></Link>
-                </div>
-                <div id="row2">
                   <Link to="/Map"><button class="myButton">Map</button></Link>
                   <Link to="/Community"><button class="myButton">Community</button></Link>
                 </div>
-                <div id="row3">
+                <div id="row2">
                   <Link to="/Statistics"><button class="myButton">Statistics</button></Link>
                   <Link to="/user"><button class="myButton">User</button></Link>
                 </div>
