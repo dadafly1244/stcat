@@ -7,15 +7,19 @@ const Header = () => {
     return (
         <header className="header">
             <Router>
-            <Link to="/">
-                <img src={mypic} alt='mypic' id="homebutton" />
-            </Link>
-            <h1>STCAT HOUSE</h1>
-            <Route exact path='/' component={Home} />
+                <Link to="/">
+                    <img src={mypic} alt='mypic' id="homebutton" />
+                </Link>
+                <h1>STCAT HOUSE</h1>
+                <Route exact path='/' component={Home}/>
             </Router>
+                
+           
+           
             
             
         </header>
+        
     )
 }
 

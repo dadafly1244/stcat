@@ -16,31 +16,32 @@ class App extends Component {
           <AmplifySignOut />
         </div>
         
-       <Router>
-        <div>
-          <nav>
-            <div id="grid">
-              <div id="row1">
-                <Link to="/"><button class="myButton">Home</button></Link>
+        <Router>
+          
+          <div>
+            <nav>
+              <div id="grid">
+                <div id="row1">
+                  <Link to="/"><button class="myButton">Home</button></Link>
+                </div>
+                <div id="row2">
+                    <Link to="/Map"><button class="myButton">Map</button></Link>
+                    <Link to="/Community"><button class="myButton">Community</button></Link>
+                </div>
+                <div id="row3">
+                    <Link to="/Statistics"><button class="myButton">Statistics</button></Link>
+                    <Link to="/user"><button class="myButton">User</button></Link>
+                </div>
               </div>
-              <div id="row2">
-                  <Link to="/Map"><button class="myButton">Map</button></Link>
-                  <Link to="/Community"><button class="myButton">Community</button></Link>
-              </div>
-              <div id="row3">
-                  <Link to="/Statistics"><button class="myButton">Statistics</button></Link>
-                  <Link to="/user"><button class="myButton">User</button></Link>
-              </div>
-            </div>
-          </nav>
+            </nav>
 
-          <Route exact path='/' component={Home}/>
-          <Route path="/Community" component={Community}/>
-          <Route path="/Statistics" component={Statistics}/>
-          <Route path="/Map" component={Map}/>
-          <Route path='/user/:name' component={User}/>
-        </div>
-      </Router>
+            <Route exact path='/' component={Home}/>
+            <Route path="/Community" component={Community}/>
+            <Route path="/Statistics" component={Statistics}/>
+            <Route path="/Map" component={Map}/>
+            <Route path='/user/:name' component={User}/>
+          </div>
+        </Router>
        
       </div>
       

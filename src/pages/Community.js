@@ -56,7 +56,7 @@ const Community = () => {
     return(
         <div className="Community">
             <h2>My Notes App</h2>
-            <div style="text-align:center;">
+            <div style={{textAlign: "center"}}>
                 <input
                     type="file"
                     onChange={onChange}
@@ -74,7 +74,7 @@ const Community = () => {
                 <button onClick={createNote}>Create Note</button>
             </div>
             
-            <div style={{marginBottom: 30,alignItems : "center"}}>
+            <div style={{marginBottom: 30, textAlign : "center"}}>
                 {
                     notes.map(note => (
                         <div key={note.id || note.name}>
@@ -82,7 +82,7 @@ const Community = () => {
                           <p>{note.description}</p>
                           <button onClick={() => deleteNote(note)}>Delete note</button>
                           {
-                            note.image && <img src={note.image} style={{width: 400 , alignItems : "center"}} />
+                            note.image && <img src={note.image} style={{width: 400 , textAlign : "center"}} />
                           }
                         </div>
                     ))
