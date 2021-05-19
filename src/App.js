@@ -5,9 +5,16 @@ import './App.css';
 import Header from './components/Header'
 import { withAuthenticator, AmplifySignOut } from '@aws-amplify/ui-react'
 
+import { Auth } from 'aws-amplify';
 
+/* export default withAuthenticator(class App extends React.Component {
+  // ... your main component
+}); */
 
 class App extends Component {
+
+ 
+
   render() {
     return (
       <div className="App">

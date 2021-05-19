@@ -5,8 +5,12 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import Amplify from 'aws-amplify';
 import config from './aws-exports';
+import { withAuthenticator, AmplifySignOut } from '@aws-amplify/ui-react'
 Amplify.configure(config);
 
+
+
+ 
 ReactDOM.render(
   <React.StrictMode>
     <App />
