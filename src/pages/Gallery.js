@@ -1,6 +1,6 @@
 import React from 'react';
 
-const  User = ({match}) => {
+const Gallery = ({match}) => {
     return(
         <div>
             <h2>Hello! {match.params.name}</h2>
@@ -8,4 +8,4 @@ const  User = ({match}) => {
     )
 }
 
-export default User;
+export default Gallery;
