@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 import { API, Storage } from 'aws-amplify';
 //import { withAuthenticator, AmplifySignOut } from '@aws-amplify/ui-react';
 import { listNotes } from '../graphql/queries';
-import { createNote as createNoteMutation, deleteNote as deleteNoteMutation } from '../graphql/mutations';
+import { createNote as createNoteMutation, deleteNote as deleteNoteMutation , updateNote as updateNoteMutation } from '../graphql/mutations';
 
 const initialFormState = { name: '', description: '' }
 
@@ -47,6 +47,8 @@ const Community = () => {
         setFormData(initialFormState);
     }
 
+    
+
     async function deleteNote({ id }) {
         const newNotesArray = notes.filter(note => note.id !== id);
         setNotes(newNotesArray);
@@ -80,7 +82,7 @@ const Community = () => {
                         <div key={note.id || note.name}>
                           <h3>{note.name}</h3>
                           <p>{note.description}</p>
-                          <button onClick={() => deleteNote(note)}>Delete note</button>
+                          <button onClick={() => deleteNote(note)}>Delete note</button>                          
                           {
                             note.image && <img src={note.image} style={{width: 400 , textAlign : "center"}} />
                           }

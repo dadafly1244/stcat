@@ -4,8 +4,9 @@ import { Home, Community,Statistics, Map, Gallery, User } from './pages';
 import './App.css';
 import Header from './components/Header'
 import { withAuthenticator, AmplifySignOut } from '@aws-amplify/ui-react'
+import GreetingsApp from './GreetingsApp';
 
-import { Auth } from 'aws-amplify';
+
 
 /* export default withAuthenticator(class App extends React.Component {
   // ... your main component
@@ -18,11 +19,11 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-          
+        <GreetingsApp />  
         <Router>
           <div>
             <Link to="/Home"> <Header /></Link>
-            <AmplifySignOut />
+            
           </div>
           
           <div>
