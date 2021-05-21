@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 import { Home, Community,Statistics, Map, Gallery, User } from './pages';
 import './App.css';
 import Header from './components/Header'
-import { withAuthenticator, AmplifySignOut } from '@aws-amplify/ui-react'
+import { withAuthenticator} from '@aws-amplify/ui-react'
 import GreetingsApp from './GreetingsApp';
 
 
