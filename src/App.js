@@ -4,22 +4,17 @@ import { Home, Community,Statistics, Map, Gallery, User } from './pages';
 import './App.css';
 import Header from './components/Header'
 import { withAuthenticator} from '@aws-amplify/ui-react'
-import GreetingsApp from './GreetingsApp';
+//import GreetingsApp from './GreetingsApp'; <GreetingsApp />  
+//import AuthStateApp from './AuthStateApp'
 
-
-
-/* export default withAuthenticator(class App extends React.Component {
-  // ... your main component
-}); */
 
 class App extends Component {
-
- 
 
   render() {
     return (
       <div className="App">
-        <GreetingsApp />  
+        
+        
         <Router>
           <div>
             <Link to="/Home"> <Header /></Link>
@@ -36,7 +31,7 @@ class App extends Component {
                 <div id="row2">
                   <Link to="/Statistics"><button class="myButton">Statistics</button></Link>
                   <Link to="/Gallery"><button class="myButton">Gallery</button></Link>
-                  <Link to="/User/:name"><button class="myButton">User</button></Link>
+                  <Link to="/User"><button class="myButton">User</button></Link>
                 </div>
               </div>
             </nav>
@@ -45,8 +40,8 @@ class App extends Component {
             <Route path="/Community" component={Community}/>
             <Route path="/Statistics" component={Statistics}/>
             <Route path="/Map" component={Map}/>
-            <Route path='/Gallery/' component={Gallery}/>
-            <Route path='/User/:name' component={User}/>
+            <Route path='/Gallery' component={Gallery}/>
+            <Route path='/User' component={User}/>
           </div>
         </Router>
       </div>
@@ -55,5 +50,6 @@ class App extends Component {
     );
   }
 }
-export default withAuthenticator(App);
-//export default App;
+//export default withAuthenticator(App, {initialAuthState: 'signup'});
+//export default withAuthenticator(App);
+export default App;
