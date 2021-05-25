@@ -7,7 +7,6 @@ import { withAuthenticator, AmplifySignOut } from '@aws-amplify/ui-react'
 import GreetingsApp from './GreetingsApp';
 
 
-
 /* export default withAuthenticator(class App extends React.Component {
   // ... your main component
 }); */
@@ -15,7 +14,6 @@ import GreetingsApp from './GreetingsApp';
 class App extends Component {
 
  
-
   render() {
     return (
       <div className="App">
@@ -55,5 +53,5 @@ class App extends Component {
     );
   }
 }
-//export default withAuthenticator(App);
-export default App;
+export default withAuthenticator(App);
+//export default App;

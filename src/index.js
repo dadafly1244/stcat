@@ -6,10 +6,7 @@ import reportWebVitals from './reportWebVitals';
 import Amplify from 'aws-amplify';
 import config from './aws-exports';
 import { withAuthenticator, AmplifySignOut } from '@aws-amplify/ui-react'
-//Amplify.configure(config);
-
-
-
+Amplify.configure(config);
 
 
  
