@@ -19,11 +19,11 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <GreetingsApp />  
+        
         <Router>
           <div>
             <Link to="/Home"> <Header /></Link>
-            
+             
           </div>
           
           <div>
@@ -55,5 +55,5 @@ class App extends Component {
     );
   }
 }
-export default withAuthenticator(App);
-//export default App;
+//export default withAuthenticator(App);
+export default App;
