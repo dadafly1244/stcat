@@ -7,20 +7,10 @@ import Header from './components/Header'
 //import GreetingsApp from './GreetingsApp'; <GreetingsApp />  
 import AuthStateApp from './AuthStateApp'
 
-<<<<<<< HEAD
 
 
 class App extends Component {
 
-=======
-/* export default withAuthenticator(class App extends React.Component {
-  // ... your main component
-}); */
-
-class App extends Component {
-
- 
->>>>>>> 6fb0ad9c66b731e2ee1240ca9dcbc857c42696ce
   render() {
     return (
       <div className="App">
