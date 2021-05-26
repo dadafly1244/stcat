@@ -6,7 +6,6 @@ import { AuthState, onAuthUIStateChange } from '@aws-amplify/ui-components';
 import awsconfig from './aws-exports';
 import GreetingsApp from './GreetingsApp'
 
-
 Amplify.configure(awsconfig);
 
 const AuthStateApp = () => {
