@@ -1,9 +1,11 @@
 import React from 'react';
 import './App.css';
 import Amplify from 'aws-amplify';
-import { AmplifyAuthenticator, AmplifySignUp, AmplifySignOut } from '@aws-amplify/ui-react';
+import { AmplifyAuthenticator, AmplifySignUp, AmplifySignIn,  AmplifySignOut, AmplifyConfirmSignIn, AmplifyConfirmSignUp, AmplifyForgotPassword } from '@aws-amplify/ui-react';
 import { AuthState, onAuthUIStateChange } from '@aws-amplify/ui-components';
 import awsconfig from './aws-exports';
+import GreetingsApp from './GreetingsApp'
+
 
 Amplify.configure(awsconfig);
 
@@ -20,11 +22,20 @@ const AuthStateApp = () => {
 
   return authState === AuthState.SignedIn && user ? (
       <div className="App">
-          <div>Hello, {user.username}</div>
+          <GreetingsApp />
+          <div>Hello, {user.username} {console.log(user)}</div>
           <AmplifySignOut />
       </div>
     ) : (
       <AmplifyAuthenticator>
+        <AmplifySignIn
+          headerText="STCAT에 로그인"
+          slot="sign-in"
+        />
+        <AmplifyConfirmSignIn
+          headerText="STCAT에 로그인 확인코드 입력"
+          slot="confirm-sign-in"
+        />
         <AmplifySignUp
           headerText="STCAT에 가입하기"
           slot="sign-up"
@@ -35,6 +46,14 @@ const AuthStateApp = () => {
           ]}
         />
 
+        <AmplifyConfirmSignUp
+            headerText="STCAT 가입 확인코드 입력"
+            slot="confirm-sign-up"
+        />
+        <AmplifyForgotPassword
+          headerText="STCAT 비밀번호를 잊었나요?"
+          slot="forgot-password"
+        />
       </AmplifyAuthenticator>
   );
 }

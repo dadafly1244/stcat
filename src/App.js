@@ -3,9 +3,10 @@ import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 import { Home, Community,Statistics, Map, Gallery, User } from './pages';
 import './App.css';
 import Header from './components/Header'
-import { withAuthenticator} from '@aws-amplify/ui-react'
+
 //import GreetingsApp from './GreetingsApp'; <GreetingsApp />  
-//import AuthStateApp from './AuthStateApp'
+import AuthStateApp from './AuthStateApp'
+
 
 
 class App extends Component {
@@ -13,12 +14,11 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        
-        
+        <AuthStateApp />
         <Router>
           <div>
             <Link to="/Home"> <Header /></Link>
-            
+             
           </div>
           
           <div>
@@ -50,6 +50,5 @@ class App extends Component {
     );
   }
 }
-//export default withAuthenticator(App, {initialAuthState: 'signup'});
 //export default withAuthenticator(App);
 export default App;

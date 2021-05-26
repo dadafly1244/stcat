@@ -1,15 +1,12 @@
 import { Account } from '../components/Accounts';
-import Attributes from '../components/Attributes';
 import React from 'react';
-
-import Signup from '../components/Signup';
-import Login from '../components/Login';
-import Status from '../components/Status';
-import ForgotPassword from '../components/ForgotPassword';
-import Settings from '../components/Settings';
-
-
-
+import Signup from "../components/Signup";
+import Login from "../components/Login";
+import ForgotPassword from "../components/ForgotPassword";
+import Status from "../components/Status";
+import Settings from "../components/Settings";
+import Attributes from "../components/Attributes";
+//I love you dayoung
 const  User = ({match}) => {
  
     return(
