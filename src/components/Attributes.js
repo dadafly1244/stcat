@@ -9,7 +9,7 @@ export default () => {
 
   useEffect(() => {
     getSession().then((data) => {
-      setDeviceId(data["custom:device_id"]);
+      setDeviceId(data[" custom:device_id"]);
     });
   }, []);
 
@@ -18,7 +18,7 @@ export default () => {
 
     getSession().then(({ user }) => {
       const attributes = [
-        new CognitoUserAttribute({ Name: "custom:device_id", Value: deviceId }),
+        new CognitoUserAttribute({ Name: " custom:device_id", Value: deviceId }),
       ];
 
       user.updateAttributes(attributes, (err, result) => {
@@ -30,11 +30,11 @@ export default () => {
 
   return (
     <div>
-      <h1>Update your plan:</h1>
+      <h1>Update device ID:</h1>
       <form onSubmit={onSubmit}>
         <input value={deviceId} onChange={(event) => setDeviceId(event.target.value)} />
 
-        <button type="submit">Change device</button>
+        <button type="submit">Change device ID</button>
       </form>
     </div>
   );

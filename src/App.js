@@ -8,7 +8,14 @@ import AuthStateApp from './AuthStateApp'
 
 
 
+
+/* export default withAuthenticator(class App extends React.Component {
+  // ... your main component
+}); */
+
 class App extends Component {
+
+ 
 
   render() {
     return (
@@ -30,7 +37,7 @@ class App extends Component {
                 <div id="row2">
                   <Link to="/Statistics"><button class="myButton">Statistics</button></Link>
                   <Link to="/Gallery"><button class="myButton">Gallery</button></Link>
-                  <Link to="/User"><button class="myButton">User</button></Link>
+                  <Link to="/User/:name"><button class="myButton">User</button></Link>
                 </div>
               </div>
             </nav>
@@ -39,8 +46,8 @@ class App extends Component {
             <Route path="/Community" component={Community}/>
             <Route path="/Statistics" component={Statistics}/>
             <Route path="/Map" component={Map}/>
-            <Route path='/Gallery' component={Gallery}/>
-            <Route path='/User' component={User}/>
+            <Route path='/Gallery/' component={Gallery}/>
+            <Route path='/User/:name' component={User}/>
           </div>
         </Router>
       </div>
